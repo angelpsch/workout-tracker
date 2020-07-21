@@ -1,7 +1,8 @@
 let mongoose = require("mongoose");
-let db = require("../models/");
+let db = require("../Unsolved/models");
 
-mongoose.connect("mongodb://localhost/workout_tracker", {
+
+mongoose.connect("mongodb://localhost:27017/workout_tracker", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
@@ -19,7 +20,7 @@ let workoutSeed = [
         sets: 4
       }
     ]
-  }, 
+  },
   {
     day: new Date().setDate(new Date().getDate()-9),
     exercises: [
